@@ -1,0 +1,21 @@
+Mod Script Process
+Teleportation Mod
+Attempt 1
+- Add Empty "Teleporters", Add Script "Teleportation"
+Goal: If disc collides with Bat1, teleport to Bat2
+- Add Bat1 and Bat2 rb.position
+- Set-up CompareTag for "Disc"
+- Issue: Bat1 and Bat2, trying to make it reference scene "Bat1" and "Bat2", but it also must be a vector2?
+- Fixed!: Changed Bat1 & Bat2 to trigger colliders, then changed script variable to public Transform "teleportDestination", then in Unity set that to be Bat2.
+- New Issue: Disc continues to accelerate as it goes through teleportation points
+- Fixed!: Reset velocity on Disc
+Complete!
+
+Trampoline Mod
+- Does not need script, just add bounciness to collider. New Idea: Duplicate "Disc" on collision with "Trampoline"
+Goal: If Trampoline collides with Disc, add 1 Disc
+- Added if statement (if ... DuplicateDisc function)
+- Added DuplicateDisc function
+- Issue: When Disc collides with Trampoline, it duplicates, but it does it a bunch of times and freezes/crashes Unity... Must change to duplicate Disc once.
+- Fixed: Offset position & set to only duplicate original Disc.
+

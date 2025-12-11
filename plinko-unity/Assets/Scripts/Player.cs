@@ -4,7 +4,7 @@ public class Player : MonoBehaviour
 {
     public float speed = 1;
     public GameObject disc;
-    public CameraFollow cameraFollow;
+    //public CameraFollow cameraFollow;
     private GameObject activeDisc;
 
     void Update()
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
             Vector3 position = transform.position;
             Quaternion rotation = transform.rotation;
             activeDisc = Instantiate(disc, position, rotation);
-            cameraFollow.FollowDisc(activeDisc);
+            //cameraFollow.FollowDisc(activeDisc);
         }
     }
     private void Move()
