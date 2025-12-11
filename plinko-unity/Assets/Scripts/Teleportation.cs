@@ -9,6 +9,12 @@ public class Teleportation : MonoBehaviour
         if (other.CompareTag("Disc"))
         {
             other.transform.position = teleportDestination.position;
+
+            Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero; // Reset velocity
+            }
         }
     }
 }
