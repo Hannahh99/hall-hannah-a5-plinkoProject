@@ -19,3 +19,11 @@ Goal: If Trampoline collides with Disc, add 1 Disc
 - Issue: When Disc collides with Trampoline, it duplicates, but it does it a bunch of times and freezes/crashes Unity... Must change to duplicate Disc once.
 - Fixed: Offset position & set to only duplicate original Disc.
 
+
+Adding Scenes Together:
+Create "VampiricPlinko" Scene
+Add Player
+Add Pegs & Peg Rows
+Add Moon (Trampoline & Duplicate)
+Add Bat1 & Bat2 (Teleporters)
+Add Score Triggers
